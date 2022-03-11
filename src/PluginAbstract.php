@@ -1,6 +1,6 @@
 <?php
 
-namespace VekaServer\TableForm;
+namespace VekaServer\Abstract;
 
 use VekaServer\Interfaces\PluginInterface;
 
