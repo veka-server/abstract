@@ -15,7 +15,7 @@ abstract class PluginAbstract implements PluginInterface
     public static function getPathView():array {
         $r = static::getVIEW();
         foreach (static::getAllRequiredPlugin() as $plugin){
-            return array_merge($plugin::getPathView(), $r);
+            $r = array_merge($plugin::getPathView(), $r);
         }
         return $r;
     }
@@ -23,7 +23,7 @@ abstract class PluginAbstract implements PluginInterface
     public static function getPathJS():array {
         $r = static::getJS();
         foreach (static::getAllRequiredPlugin() as $plugin){
-            return array_merge($plugin::getPathJS(), $r);
+            $r = array_merge($plugin::getPathJS(), $r);
         }
         return $r;
     }
@@ -31,7 +31,7 @@ abstract class PluginAbstract implements PluginInterface
     public static function getPathCSS():array {
         $r = static::getCSS();
         foreach (static::getAllRequiredPlugin() as $plugin){
-            return array_merge($plugin::getPathCSS(), $r);
+            $r = array_merge($plugin::getPathCSS(), $r);
         }
         return $r;
     }
